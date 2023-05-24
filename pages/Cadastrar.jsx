@@ -4,7 +4,7 @@ import {
     KeyboardAvoidingView, TouchableOpacity, TouchableWithoutFeedback,
     StatusBar, View, TextInput, Alert, Image } from "react-native";
 
-export default function Login({ navigation }){
+export default function Cadastrar({ navigation }){
     const [email, setEmail] = React.useState('');
     const [senha, setSenha] = React.useState('');
 
@@ -46,20 +46,15 @@ export default function Login({ navigation }){
 
                         <TouchableOpacity
                             style={styles.botao}
+                            
                         >
-                            <Text style={styles.textoBotao}>Entrar</Text>
+                            <Text style={styles.textoBotao}>Cadastrar usuario</Text>
                         </TouchableOpacity>
                         
                         <TouchableOpacity
-                            onPress={() => navigation.navigate('Cadastro')}
+                            onPress={() => navigation.navigate('Login')}
                         >
-                            <Text style={styles.textoMenor}>Não tem uma conta? Crie sua conta</Text>
-                        </TouchableOpacity>
-
-                        <TouchableOpacity
-                            
-                        >
-                            <Text style={styles.textoMenor}>Esqueci a minha senha</Text>
+                            <Text style={styles.textoMenor}>Já tem conta? Faça Login</Text>
                         </TouchableOpacity>
                     </View>
                 </TouchableWithoutFeedback>
