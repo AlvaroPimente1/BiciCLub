@@ -1,8 +1,10 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import Login from "../pages/Login";
 import Cadastrar from "../pages/Cadastrar";
+import Home from "../pages/Home";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +18,7 @@ export default function Routes(){
             >
                 <Stack.Screen name='Login' component={Login}/> 
                 <Stack.Screen name='Cadastro' component={Cadastrar}/> 
+                <Stack.Screen name='Home' component={Home}/> 
             </Stack.Navigator>
         </NavigationContainer>
     )
